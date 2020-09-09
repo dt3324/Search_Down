@@ -10,25 +10,25 @@ import org.bson.Document;
  * /@pipelineName 标签指定了pipline的名字。并且pipeline这个类需要实现Pipleline<T>。
  * @author dt
  */
-@PipelineName("starIndexPagePipeline")
-public class GeccoFictionContentPipeline implements Pipeline<GeccoFictionContent> {
+@PipelineName("GeccoFactionContent")
+public class GeccoFactionContentPipeline implements Pipeline<GeccoFactionContent> {
 
     @Override
-    public void process(GeccoFictionContent geccoFictionContent) {
+    public void process(GeccoFactionContent geccoFactionContent) {
         //章节内容
-        String chapterContent = geccoFictionContent.getChapterContent();
+        String chapterContent = geccoFactionContent.getChapterContent();
         //章节名
-        String chapterName = geccoFictionContent.getChapterName();
+        String chapterName = geccoFactionContent.getChapterName();
         //小说名
-        String fictionName = geccoFictionContent.getFictionName();
+        String factionName = geccoFactionContent.getFactionName();
         //本章字数
-        int length = geccoFictionContent.getChapterSize().length();
+        int length = geccoFactionContent.getChapterSize().length();
         Document document = new Document();
-        document.append("fictionName", fictionName);
+        document.append("factionName", factionName);
         document.append("chapterName", chapterName);
         document.append("length", length);
         document.append("chapterContent", chapterContent);
 
-        MongoClient.getFictionContentClient().insertOne(document);
+        MongoClient.getFactionContentClient().insertOne(document);
     }
 }

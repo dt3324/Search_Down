@@ -9,47 +9,47 @@ import org.springframework.data.mongodb.core.MongoTemplate;
  */
 public class MongoClient {
     /**
-     * 获取fiction库的MongoTemplate
+     * 获取faction库的MongoTemplate
      * @return
      */
-    public static MongoTemplate getFictionMongoTemplate(){
-        return new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
+    public static MongoTemplate getFactionMongoTemplate(){
+        return new MongoTemplate(new com.mongodb.MongoClient("localhost", 27017), "faction");
     }
 
     /**
-     * 获取fiction库 fictionCatalogue 表的Client
+     * 获取faction库 factionCatalogue 表的Client
      * @return
      */
-    public static MongoCollection<Document> getFictionCatalogueClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
-        return mongoTemplate.getCollection("fictionCatalogue");
+    public static MongoCollection<Document> getFactionCatalogueClient(){
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("localhost", 27017), "faction");
+        return mongoTemplate.getCollection("factionCatalogue");
     }
 
     /**
-     * 获取fiction库 fictionContent 表的Client
+     * 获取faction库 factionContent 表的Client
      * @return
      */
-    public static MongoCollection<Document> getFictionContentClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
-        return mongoTemplate.getCollection("fictionContent");
+    public static MongoCollection<Document> getFactionContentClient(){
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("localhost", 27017), "faction");
+        return mongoTemplate.getCollection("factionContent");
     }
 
     /**
-     * 获取fiction库 fictionDetail 表的Client
+     * 获取faction库 factionDetail 表的Client
      * @return
      */
-    public static MongoCollection<Document> getFictionDetailClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
-        return mongoTemplate.getCollection("fictionDetail");
+    public static MongoCollection<Document> getFactionDetailClient(){
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("localhost", 27017), "faction");
+        return mongoTemplate.getCollection("factionDetail");
     }
 
     /**
-     * 获取fiction库 fictionList 表的Client
+     * 获取faction库 factionList 表的Client
      * @return
      */
-    public static MongoCollection<Document> getFictionListClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
-        return mongoTemplate.getCollection("fictionList");
+    public static MongoCollection<Document> getFactionListClient(){
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("localhost", 27017), "faction");
+        return mongoTemplate.getCollection("factionList");
     }
 
 }

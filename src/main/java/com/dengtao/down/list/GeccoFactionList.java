@@ -12,8 +12,8 @@ import java.util.List;
  *
  * @author dt
  */
-@Gecco(matchUrl = "http://www.xbiquge.la/xiaoshuodaquan/", pipelines = {"consolePipeline", "starIndexPagePipeline"})
-public class GeccoFictionList implements HtmlBean {
+@Gecco(matchUrl = "http://www.xbiquge.la/xiaoshuodaquan/", pipelines = {"consolePipeline", "GeccoFactionList"})
+public class GeccoFactionList implements HtmlBean {
 
     private static final long serialVersionUID = 1225018257932399804L;
 

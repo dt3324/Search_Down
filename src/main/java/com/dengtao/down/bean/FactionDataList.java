@@ -9,7 +9,7 @@ import org.bson.Document;
 /**
  * @author dt
  */
-public class FictionDataList implements HtmlBean {
+public class FactionDataList implements HtmlBean {
 
     /**
      * 封面图片
@@ -23,21 +23,21 @@ public class FictionDataList implements HtmlBean {
      */
     @Text
     @HtmlField(cssPath = "#info > h1")
-    private  String fictionName;
+    private  String factionName;
 
     /**
      * 作者
      */
     @Text
     @HtmlField(cssPath = "#info > p:nth-child(2)")
-    private  String fictionUser;
+    private  String factionUser;
 
     /**
      * 分类
      */
     @Text
     @HtmlField(cssPath = "#wrapper > div:nth-child(6) > div.con_top > a:nth-child(3)")
-    private  String fictionClassify;
+    private  String factionClassify;
 
     /**
      * 完结
@@ -63,9 +63,9 @@ public class FictionDataList implements HtmlBean {
     public Document getDocument(){
         Document document = new Document();
         document.put("coverImg", this.coverImg);
-        document.put("fictionUser", this.fictionUser);
-        document.put("fictionName", this.fictionName);
-        document.put("fictionClassify", this.fictionClassify);
+        document.put("factionUser", this.factionUser);
+        document.put("factionName", this.factionName);
+        document.put("factionClassify", this.factionClassify);
         document.put("isEnd", this.isEnd);
         document.put("synopsis", this.synopsis);
         document.put("numberTotal", this.numberTotal);
@@ -80,28 +80,28 @@ public class FictionDataList implements HtmlBean {
         this.coverImg = coverImg;
     }
 
-    public String getFictionName() {
-        return fictionName;
+    public String getFactionName() {
+        return factionName;
     }
 
-    public void setFictionName(String fictionName) {
-        this.fictionName = fictionName;
+    public void setFactionName(String factionName) {
+        this.factionName = factionName;
     }
 
-    public String getFictionUser() {
-        return fictionUser;
+    public String getFactionUser() {
+        return factionUser;
     }
 
-    public void setFictionUser(String fictionUser) {
-        this.fictionUser = fictionUser;
+    public void setFactionUser(String factionUser) {
+        this.factionUser = factionUser;
     }
 
-    public String getFictionClassify() {
-        return fictionClassify;
+    public String getFactionClassify() {
+        return factionClassify;
     }
 
-    public void setFictionClassify(String fictionClassify) {
-        this.fictionClassify = fictionClassify;
+    public void setFactionClassify(String factionClassify) {
+        this.factionClassify = factionClassify;
     }
 
     public String getIsEnd() {
