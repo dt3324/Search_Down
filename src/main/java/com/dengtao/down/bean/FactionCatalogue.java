@@ -9,7 +9,7 @@ import org.bson.Document;
 /**
  * @author dt
  */
-public class FictionCatalogue implements HtmlBean {
+public class FactionCatalogue implements HtmlBean {
 
     /**
      * 章节URL

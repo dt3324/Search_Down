@@ -16,20 +16,20 @@ public class SimpleData  implements HtmlBean {
     private String url;
     @Text
     @HtmlField(cssPath = "li > a")
-    private String fictionName;
+    private String factionName;
 
     public Document getDocument(){
         Document document = new Document();
         document.append("url", this.url);
-        document.append("fictionName", this.fictionName);
+        document.append("factionName", this.factionName);
         return document;
     }
-    public String getFictionName() {
-        return fictionName;
+    public String getFactionName() {
+        return factionName;
     }
 
-    public void setFictionName(String fictionName) {
-        this.fictionName = fictionName;
+    public void setFactionName(String factionName) {
+        this.factionName = factionName;
     }
 
     public String getUrl() {

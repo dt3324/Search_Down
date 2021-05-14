@@ -1,6 +1,6 @@
 package com.dengtao.down.catalogue;
 
-import com.dengtao.down.bean.FictionCatalogue;
+import com.dengtao.down.bean.FactionCatalogue;
 import com.geccocrawler.gecco.annotation.*;
 import com.geccocrawler.gecco.request.HttpRequest;
 import com.geccocrawler.gecco.spider.HtmlBean;
@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author dt
  */
-@Gecco(matchUrl = "http://www.xbiquge.la/{?}/{?}/", pipelines = {"consolePipeline", "starIndexPagePipeline"})
+@Gecco(matchUrl = "http://www.xbiquge.la/{?}/{?}/", pipelines = {"consolePipeline", "GeccoListPipeline"})
 public class GeccoList implements HtmlBean {
 
     private static final long serialVersionUID = 1225018257932399804L;
@@ -26,7 +26,7 @@ public class GeccoList implements HtmlBean {
      * cssPath获取小技巧：用Chrome浏览器打开需要抓取的网页，按F12进入发者模式。然后在浏览器右侧选中该元素，鼠标右键选择Copy–Copy selector，即可获得该元素的cssPath
      */
     @HtmlField(cssPath = "#list > dl > dd")
-    private List<FictionCatalogue> fictionCatalogues;
+    private List<FactionCatalogue> factionCatalogues;
 
     /**
      * 封面图片
@@ -40,21 +40,21 @@ public class GeccoList implements HtmlBean {
      */
     @Text
     @HtmlField(cssPath = "#info > h1")
-    private  String fictionName;
+    private  String factionName;
 
     /**
      * 作者
      */
     @Text
     @HtmlField(cssPath = "#info > p:nth-child(2)")
-    private  String fictionUser;
+    private  String factionUser;
 
     /**
      * 分类 #wrapper > div:nth-child(6) > div.con_top > a:nth-child(3)
      */
     @Html
     @HtmlField(cssPath = "#wrapper > div:nth-child(5) > div.con_top > a:nth-child(3)")
-    private  String fictionClassify;
+    private  String factionClassify;
 
     /**
      * 最后跟新时间
@@ -86,28 +86,28 @@ public class GeccoList implements HtmlBean {
         this.coverImg = coverImg;
     }
 
-    public String getFictionName() {
-        return fictionName;
+    public String getFactionName() {
+        return factionName;
     }
 
-    public void setFictionName(String fictionName) {
-        this.fictionName = fictionName;
+    public void setFactionName(String factionName) {
+        this.factionName = factionName;
     }
 
-    public String getFictionUser() {
-        return fictionUser;
+    public String getFactionUser() {
+        return factionUser;
     }
 
-    public void setFictionUser(String fictionUser) {
-        this.fictionUser = fictionUser;
+    public void setFactionUser(String factionUser) {
+        this.factionUser = factionUser;
     }
 
-    public String getFictionClassify() {
-        return fictionClassify;
+    public String getFactionClassify() {
+        return factionClassify;
     }
 
-    public void setFictionClassify(String fictionClassify) {
-        this.fictionClassify = fictionClassify;
+    public void setFactionClassify(String factionClassify) {
+        this.factionClassify = factionClassify;
     }
 
     public String getLastTime() {
@@ -126,11 +126,11 @@ public class GeccoList implements HtmlBean {
         this.synopsis = synopsis;
     }
 
-    public List<FictionCatalogue> getFictionCatalogues() {
-        return fictionCatalogues;
+    public List<FactionCatalogue> getFactionCatalogues() {
+        return factionCatalogues;
     }
 
-    public void setFictionCatalogues(List<FictionCatalogue> fictionCatalogues) {
-        this.fictionCatalogues = fictionCatalogues;
+    public void setFactionCatalogues(List<FactionCatalogue> factionCatalogues) {
+        this.factionCatalogues = factionCatalogues;
     }
 }

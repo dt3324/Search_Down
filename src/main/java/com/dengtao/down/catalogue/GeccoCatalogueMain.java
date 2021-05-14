@@ -23,7 +23,7 @@ public class GeccoCatalogueMain {
         //创建搜索引擎
         GeccoEngine.create()
                 //要搜索的包名，会自动搜索该包下，含@Gecco注解的文件。
-                .classpath("com.dengtao.down.catalogue")
+                .classpath("com.dengtao.down")
                 .start(start)
                 //开启多少个线程抓取
                 .thread(50)

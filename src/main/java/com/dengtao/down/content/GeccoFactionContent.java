@@ -9,8 +9,8 @@ import com.geccocrawler.gecco.spider.HtmlBean;
  *
  * @author dt
  */
-@Gecco(matchUrl = "http://www.xbiquge.la/15/15409/{?}.html", pipelines = {"consolePipeline", "starIndexPagePipeline"})
-public class GeccoFictionContent implements HtmlBean {
+@Gecco(matchUrl = "http://www.xbiquge.la/{？}/{？}/{?}.html", pipelines = {"consolePipeline", "GeccoFactionContent"})
+public class GeccoFactionContent implements HtmlBean {
 
     private static final long serialVersionUID = 1225018257932399804L;
 
@@ -22,7 +22,7 @@ public class GeccoFictionContent implements HtmlBean {
      */
     @Text
     @HtmlField(cssPath = "#wrapper > div.content_read > div > div.con_top > a:nth-child(4)")
-    private  String fictionName;
+    private  String factionName;
 
     /**
      * 章节名
@@ -62,12 +62,12 @@ public class GeccoFictionContent implements HtmlBean {
         this.request = request;
     }
 
-    public String getFictionName() {
-        return fictionName;
+    public String getFactionName() {
+        return factionName;
     }
 
-    public void setFictionName(String fictionName) {
-        this.fictionName = fictionName;
+    public void setFactionName(String factionName) {
+        this.factionName = factionName;
     }
 
     public String getChapterName() {
