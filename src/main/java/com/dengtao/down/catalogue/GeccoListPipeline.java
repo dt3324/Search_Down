@@ -63,7 +63,7 @@ public class GeccoListPipeline implements Pipeline<GeccoList> {
         document.append("factionClassify", geccoList.getFactionClassify());
         document.append("isEnd", isEnd);
         document.append("synopsis", geccoList.getSynopsis());
-        MongoClient.getFactionDetailClient().insertOne(document);
+        MongoClient.getFictionDetailClient().insertOne(document);
 
         //小说章节目录入库
         ArrayList<Document> documents = new ArrayList<>();
@@ -74,6 +74,6 @@ public class GeccoListPipeline implements Pipeline<GeccoList> {
             SchedulerContext.into(geccoList.getRequest().subRequest(factionCatalogue.getChapterUrl()));
             documents.add(document1);
         }
-        MongoClient.getFactionCatalogueClient().insertMany(documents);
+        MongoClient.getFictionContentClient().insertMany(documents);
     }
 }

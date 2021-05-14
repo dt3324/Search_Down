@@ -29,7 +29,7 @@ public class ExcelExportUtil {
     //各个列的元素key值
     private String[] heardKey;
     //需要填充的数据信息
-    private List<Map<String, Object>> data;
+    private List<Map<String, String>> data;
     //字体大小
     private int fontSize = 14;
     //行高
@@ -63,11 +63,11 @@ public class ExcelExportUtil {
         this.heardKey = heardKey;
     }
 
-    public List<Map<String, Object>> getData() {
+    public List<Map<String, String>> getData() {
         return data;
     }
 
-    public void setData(List<Map<String, Object>> data) {
+    public void setData(List<Map<String, String>> data) {
         this.data = data;
     }
 

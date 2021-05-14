@@ -1,17 +1,12 @@
 package com.dengtao.down.spyy;
 
-import com.dengtao.down.application.MongoClient;
-import com.dengtao.down.bean.SimpleData;
 import com.dengtao.down.bean.User;
-import com.dengtao.down.list.GeccoFictionList;
 import com.geccocrawler.gecco.annotation.PipelineName;
 import com.geccocrawler.gecco.pipeline.Pipeline;
 import com.geccocrawler.gecco.request.HttpRequest;
 import com.geccocrawler.gecco.scheduler.SchedulerContext;
 import org.apache.commons.lang3.StringUtils;
-import org.bson.Document;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,10 +26,10 @@ public class GeccoFictionSpyyPipeline implements Pipeline<GeccoFictionSpyy> {
         }
 
         //爬取下一页
-        HttpRequest currRequest = geccoFictionSpyy.getRequest();
-        int currPageNum = 1;
-        System.out.println("----------已爬取第"+currPageNum+"页----------");
-        searchNext(currPageNum,currRequest);
+//        HttpRequest currRequest = geccoFictionSpyy.getRequest();
+//        int currPageNum = 1;
+//        System.out.println("----------已爬取第"+currPageNum+"页----------");
+//        searchNext(currPageNum,currRequest);
     }
 
     public void searchNext(int currPageNum,HttpRequest currRequest){

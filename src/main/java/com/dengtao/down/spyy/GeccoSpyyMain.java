@@ -2,25 +2,18 @@ package com.dengtao.down.spyy;
 
 import com.dengtao.down.bean.User;
 import com.dengtao.down.util.ExcelExportUtil;
-import com.dengtao.down.util.ExcelUtil;
-import com.dengtao.down.util.ExcelUtiles;
 import com.geccocrawler.gecco.GeccoEngine;
 import com.geccocrawler.gecco.request.HttpGetRequest;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.DataNode;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -71,8 +64,8 @@ public class GeccoSpyyMain {
     }
 
     public static void main(String[] args) throws Exception {
-        String fileName = "/workbook14.xlsx";
-        int num = 14;
+        String fileName = "/workbook1.xlsx";
+        int num = 1;
         String html = GeccoSpyyMain.getHtml("https://park.ibaizhe.cn/uppman/park/owner/index.html?sp_provice=0&sp_city=0&sp_county=0&sp_park_name=&sp_park_id=0&sp_keywords=&sp_otype_id=0&sp_create_start_time=&sp_create_end_time=&sp_start_time=&sp_end_time=&sp_state=all&sp_issue_admin_name=&sp_issue_admin_id=0&ps=100&p="+ num);
 //        System.out.println(html);
         //6.Jsoup解析html
@@ -154,23 +147,23 @@ public class GeccoSpyyMain {
                 users1.add(map);
             }
         }
-        String[] title = {"楼号", "业主姓名", "业主电话", "地址", "收费类型", "卡号", "卡内码", "车位号", "发卡人", "卡片启用时间", "卡片结束时间", "押金", "卡费", "状态"};
-        String sheetTitle = "title";
-        String[] properties = new String[]{"floor", "ownerName", "ownerPhone", "address", "cardNumber", "cardware", "spaceNumber", "cardholder", "startTime", "endTime", "deposit", "cardFee", "status"};  // 查询对应的字段
-        ExcelExportUtil excelExport2 = new ExcelExportUtil();
-        excelExport2.setData(users1);
-        excelExport2.setHeardKey(properties);
-        excelExport2.setFontSize(14);
-        excelExport2.setSheetName(sheetTitle);
-        excelExport2.setTitle(sheetTitle);
-        excelExport2.setHeardList(title);
-        try {
+//        String[] title = {"楼号", "业主姓名", "业主电话", "地址", "收费类型", "卡号", "卡内码", "车位号", "发卡人", "卡片启用时间", "卡片结束时间", "押金", "卡费", "状态"};
+//        String sheetTitle = "title";
+//        String[] properties = new String[]{"floor", "ownerName", "ownerPhone", "address", "cardNumber", "cardware", "spaceNumber", "cardholder", "startTime", "endTime", "deposit", "cardFee", "status"};  // 查询对应的字段
+//        ExcelExportUtil excelExport2 = new ExcelExportUtil();
+////        excelExport2.setData(users1);
+//        excelExport2.setHeardKey(properties);
+//        excelExport2.setFontSize(14);
+//        excelExport2.setSheetName(sheetTitle);
+//        excelExport2.setTitle(sheetTitle);
+//        excelExport2.setHeardList(title);
+//        try {
 
             FileOutputStream fileOut = new FileOutputStream(new File("").getAbsoluteFile() + fileName);
-            byte[] data = excelExport2.exportExport(fileOut);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//            byte[] data = excelExport2.exportExport(fileOut);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 

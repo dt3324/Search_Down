@@ -58,7 +58,7 @@ public class GeccoFactionListPipeline implements Pipeline<GeccoFactionList> {
         for (SimpleData starDetail : xhList) {
             documents.add(starDetail.getDocument());
         }
-        MongoClient.getFactionListClient().insertMany(documents);
+        MongoClient.getFictionListClient().insertMany(documents);
 
         //爬取下一页
 //        HttpRequest currRequest = geccoFactionList.getRequest();

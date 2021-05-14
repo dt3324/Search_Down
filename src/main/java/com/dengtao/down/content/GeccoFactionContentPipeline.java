@@ -29,6 +29,6 @@ public class GeccoFactionContentPipeline implements Pipeline<GeccoFactionContent
         document.append("length", length);
         document.append("chapterContent", chapterContent);
 
-        MongoClient.getFactionContentClient().insertOne(document);
+        MongoClient.getFictionContentClient().insertOne(document);
     }
 }
