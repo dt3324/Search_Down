@@ -13,7 +13,7 @@ public class MongoClient {
      * @return
      */
     public static MongoTemplate getFictionMongoTemplate(){
-        return new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
+        return new MongoTemplate(new com.mongodb.MongoClient("192.168.7.139", 27017), "fiction");
     }
 
     /**
@@ -21,7 +21,7 @@ public class MongoClient {
      * @return
      */
     public static MongoCollection<Document> getFictionCatalogueClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.7.139", 27017), "fiction");
         return mongoTemplate.getCollection("fictionCatalogue");
     }
 
@@ -30,7 +30,7 @@ public class MongoClient {
      * @return
      */
     public static MongoCollection<Document> getFictionContentClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.", 27017), "fiction");
         return mongoTemplate.getCollection("fictionContent");
     }
 
@@ -39,7 +39,7 @@ public class MongoClient {
      * @return
      */
     public static MongoCollection<Document> getFictionDetailClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.7.139", 27017), "fiction");
         return mongoTemplate.getCollection("fictionDetail");
     }
 
@@ -48,7 +48,7 @@ public class MongoClient {
      * @return
      */
     public static MongoCollection<Document> getFictionListClient(){
-        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.99.115", 27017), "fiction");
+        MongoTemplate mongoTemplate = new MongoTemplate(new com.mongodb.MongoClient("192.168.7.139", 27017), "fiction");
         return mongoTemplate.getCollection("fictionList");
     }
 
